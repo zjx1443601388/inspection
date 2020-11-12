@@ -1,0 +1,13 @@
+---
+- name: get mem resource info
+  shell: 'cat /proc/meminfo'
+  register: mem_info
+
+- name: record mem information
+  debug: 
+    msg: "System is {{item}}"
+  with_items: "{{mem_info.stdout}}"
+
+
+#- name: get total mem resource
+  

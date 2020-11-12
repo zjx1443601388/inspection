@@ -1,0 +1,3 @@
+---
+- name: check physical resource 
+  include: physical_resource.yml
